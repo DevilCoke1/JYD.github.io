@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#box{
+				height: 50px;
+				width: 80px;
+				background: #0055ff;
+				text-align: center;
+				line-height: 20px;
+				margin: auto;
+				position: absolute;
+				top: 0 ;
+				left: 0 ;
+				right: 0 ;
+				bottom: 0 ;
+			}
+			#shuchu{
+				background-color: #000;
+				height: 500px;
+				width: 500px;
+				text-align: center;
+				line-height: 500px;
+				color: #fff;
+				font-size: 50px;
+			}
+			#shuru{
+				color: #666;
+				margin-bottom: 5px;
+				margin-top: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>CSS选择器有：</h2>
+		<div>!important > 行内样式 > ID选择器 > 类选择器 > 元素 > 通配符 > 继承 > 浏览器默认属性</div>
+		<h2>盒子居中</h2>
+		<div id="box" class="center">盒子居中</div>
+		<h2>js数据类型及私有属性</h2>
+		<p>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					Array数组类型	
+					push()：向数组的末尾添加新的元素
+					concat()：合并两个数组或个数组
+					pop()：删除数组的最后一个元素
+					reverse()：反转数组
+					sort()：字母顺序排列数组
+					sort(function(a,b){return a-b})：数字逆序排列数组
+					sort(function(a,b){return b-a})：数字逆序排列数组
+					slice()：选择数组中的第到y个元素
+					splice()：在数组中指定位置添加新的元素
+					unshift()：在数组开头添加新元素
+					shift()：删除数组的第一个元素
+				</li>
+				<li class="mui-table-view-cell">
+					Number数字类型
+					toFixed()：把数字转换为字符串，结果的小数点后有指定位数的数字
+					toPrecision()：把数字格式化为指定的长度
+				</li>
+				<li class="mui-table-view-cell">
+					String字符串类型
+					charAt()：返回指定位置的字符
+					concat()：连接两个字符串或多个字符串
+					match()：查找找到一个或多个正则表达式的匹配
+					replace()：在字符串中查找匹配的子串，并替换与正则表达式匹配的子串
+					search()：查找与正则表达式相匹配的值
+					slice()：提取字符串的片断，并在新的字符串中返回被提取的部分
+					split()：把字符串分割为字符串数组
+					toLowerCase()：把字符串转换为小写
+					toUpperCase()：把字符串转换为大写
+					trim()：去除字符串两边的空白
+					toString()：返回一个字符串
+				</li>
+				<li class="mui-table-view-cell">
+					Date日期与时间类型	
+					getFullYear()：从Date对象以四位数字返回年份
+					getDay()：从Date对象返回一周中的某一天(0 ~ 6)
+					getDate()：从Date对象返回一个月中的某一天(1 ~ 31)
+					getTime()：返回1970年1月1日至今的毫秒数
+					toUTCString()：把Date对象的日期部分转换为字符串
+				</li>
+				<li class="mui-table-view-cell">
+					Math算术类型	
+					round()：对一个数字四舍五入
+					random()：返回0-1之间的一个随机数
+					random()*x：返回0-x之间的一个随机数
+					max()：返回给定数中最大的数
+					min()：返回给定数中最小的数
+				</li>
+				<li class="mui-table-view-cell">
+					RegExp正则表达式类型	
+					/搜索内容/i：不区分大小写匹配
+					/搜索内容/g：全文搜索，找到所有匹配内容
+					test()：搜索字符串指定的值，根据结果并返回真或假
+					exec()：检索字符串中的指定值，返回值是被找到的值，如果没有发现匹配，则返回null
+				</li>
+			</ul>
+		</p>
+			<h2>获取DOM元素的方法</h2>
+			<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						通过 id 查找 HTML 元素:
+						document.getElementById()
+					</li>
+					<li class="mui-table-view-cell">
+						通过标签名查找 HTML 元素:
+						document.getElementsByTagName()
+					</li>
+					<li class="mui-table-view-cell">
+						通过类名找到 HTML 元素:
+						document.getElementsByClassName()
+					</li>
+				</ul>
+				<h2>盒子变色</h2>
+				<div class="div_input paragraph">
+						<input type="text" value="输入:" id="shuru"
+						 onchange="on_change()" onfocus="on_focus()">
+						<div id="shuchu"></div>
+					</div>
+				
+					<script type="text/javascript">
+						DIV = document.getElementById('hide')
+						function close1() {
+							DIV.style.visibility = 'hidden'
+						}
+						function open1() {
+							DIV.style.visibility = 'visible'
+						}
+						var x = document.getElementById('shuru')
+						var y = document.getElementById('shuchu')
+						function on_focus() {
+							x.value = ""
+						}
+						// 在页面中创建一个div（500px*500px） 和 Input；...
+						function on_change() {
+							y.innerHTML = x.value
+							if (y.innerHTML.length > 3) {
+								y.style.background = "red"
+							}
+							else{
+								y.style.background = "#000"
+							}
+						}
+					</script>
+		
+	</body>
+</html>
